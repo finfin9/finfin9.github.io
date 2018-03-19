@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: lightgray;
+}
+
+img {
+  height: 222px;
+  width: 222px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 span:hover {
+  color: white;
+}
+
+p {
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-half {
+  color: #009999;
+}
+
+.second-half {
+  color: skyblue;
+}
+
+#social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#social-media img {
+  height: 50px;
+  width: 50px;
+}
+
+#social-media img:hover {
+  background: white;
+}
+
+@media (max-width: 400px) {
+  .image-container {
+    flex-direction: column;
+  }
+}
