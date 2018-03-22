@@ -8,18 +8,22 @@
       width: 100px;
       background: skyblue;
       position: fixed;
-      transition: all 1s;
+      transition: all .2s;
+      top: 50px;
+      left: 10px;
     }
   </style>
 </head>
 <body>
-  <h4>You have clicked <span id="count">0</span> times!</h4>
+  <h4 id="msg">You have clicked <span id="count">0</span> times!</h4>
   <div id="running-btn"></div>
 </body>
 <script>
   let counter = 0
+  let hoverCount = 0
   const btn = document.getElementById('running-btn')
   const count = document.getElementById('count')
+  const msg = document.getElementById('msg')
 
   btn.onclick = function() {
     counter++
@@ -27,8 +31,13 @@
   }
 
   btn.onmouseover = function() {
-    btn.style.top = Math.random() * 300 + 'px'
-    btn.style.left = Math.random() * 300 + 'px'
+    btn.style.top = Math.random() * 400 + 'px'
+    btn.style.left = Math.random() * 400 + 'px'
+    hoverCount++
+
+    if (counter == 0 && hoverCount > 10 && hoverCount < 20) {
+      msg.innerHTML = msg.innerHTML + ' ha!'
+    }
   }
 </script>
 </html>

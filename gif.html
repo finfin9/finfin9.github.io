@@ -2,10 +2,26 @@
 <html>
 <head>
   <title>Gif Generator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    input, button {
+      font-size: 1.5em;
+      padding: 5px;
+    }
+  </style>
 </head>
 <body>
-  <input id="input" type="text">
-  <button id="button">Generate Gif!</button>
+  <div>
+    <input placeholder="Anything" id="input" type="text">
+    <button id="button">Surprise Me!</button>
+  </div>
   <br>
   <img id="img">
 </body>
