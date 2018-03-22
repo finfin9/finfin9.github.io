@@ -17,7 +17,7 @@
 
   btn.onclick = () => {
     gif.src = 'loading.gif'
-    axios.get(`http://api.giphy.com/v1/gifs/random?api_key=iCNpkdlCuGM5sngRLOXlK5VV5R0HU2Sz&tag=${tag.value}`)
+    axios.get(`https://api.giphy.com/v1/gifs/random?api_key=iCNpkdlCuGM5sngRLOXlK5VV5R0HU2Sz&tag=${tag.value}`)
     .then(result => {
       console.log(result)
       gif.src = result.data.data.image_url
