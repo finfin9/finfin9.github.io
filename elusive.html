@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catch the button!</title>
+  <style>
+    #running-btn {
+      height: 100px;
+      width: 100px;
+      background: skyblue;
+      position: fixed;
+      transition: all 1s;
+    }
+  </style>
+</head>
+<body>
+  <h4>You have clicked <span id="count">0</span> times!</h4>
+  <div id="running-btn"></div>
+</body>
+<script>
+  let counter = 0
+  const btn = document.getElementById('running-btn')
+  const count = document.getElementById('count')
+
+  btn.onclick = function() {
+    counter++
+    count.innerHTML = counter
+  }
+
+  btn.onmouseover = function() {
+    btn.style.top = Math.random() * 300 + 'px'
+    btn.style.left = Math.random() * 300 + 'px'
+  }
+</script>
+</html>
+
